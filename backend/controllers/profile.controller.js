@@ -9,33 +9,154 @@ import {
     successResponse,
     errorResponse,
 } from "../utils/responseFormatter.js";
+import { isValidPastDate } from "../utils/dateUtils.js";
 import { randomUUID } from "crypto";
 
-// Required fields and their expected types
-const REQUIRED_FIELDS = {
-    age: "number",
-    income: "number",
-    category: "string",
-    state: "string",
-};
+// ─── Allowed enum values ──────────────────────────────────────────────────────
+
+const GENDERS = ["Male", "Female", "Other"];
+const CATEGORIES = ["SC", "ST", "OBC", "General"];
+const EMPLOYMENT_STATUSES = ["Employed", "Unemployed", "Self-Employed"];
+
+// ─── Primary profile validation ───────────────────────────────────────────────
 
 /**
- * Validate the profile payload.
+ * Validate and return a clean primaryProfile object, or return an error string.
+ *
  * @param {object} body
- * @returns {string|null} error message or null if valid
+ * @returns {{ data: object } | { error: string }}
  */
-const validateProfile = (body) => {
-    for (const [field, type] of Object.entries(REQUIRED_FIELDS)) {
-        if (body[field] === undefined || body[field] === null) {
-            return `Missing required field: ${field}`;
-        }
-        // eslint-disable-next-line valid-typeof
-        if (typeof body[field] !== type) {
-            return `Field "${field}" must be a ${type}`;
-        }
-    }
-    return null;
+const parsePrimaryProfile = (body) => {
+    const {
+        name,
+        dateOfBirth,
+        gender,
+        annualIncome,
+        category,
+        state,
+        isStudent,
+        employmentStatus,
+        isDisabled,
+        educationLevel = null,
+        landOwnership = null,
+    } = body;
+
+    // Required string fields
+    if (!name || typeof name !== "string")
+        return { error: "Missing or invalid field: name (string required)" };
+
+    if (!isValidPastDate(dateOfBirth))
+        return { error: "Missing or invalid field: dateOfBirth (YYYY-MM-DD, must be in the past)" };
+
+    if (!GENDERS.includes(gender))
+        return { error: `Field "gender" must be one of: ${GENDERS.join(", ")}` };
+
+    if (typeof annualIncome !== "number" || annualIncome < 0)
+        return { error: "Field \"annualIncome\" must be a non-negative number" };
+
+    if (!CATEGORIES.includes(category))
+        return { error: `Field "category" must be one of: ${CATEGORIES.join(", ")}` };
+
+    if (!state || typeof state !== "string")
+        return { error: "Missing or invalid field: state (string required)" };
+
+    if (typeof isStudent !== "boolean")
+        return { error: "Field \"isStudent\" must be a boolean" };
+
+    if (!EMPLOYMENT_STATUSES.includes(employmentStatus))
+        return { error: `Field "employmentStatus" must be one of: ${EMPLOYMENT_STATUSES.join(", ")}` };
+
+    if (typeof isDisabled !== "boolean")
+        return { error: "Field \"isDisabled\" must be a boolean" };
+
+    // Optional fields
+    if (educationLevel !== null && typeof educationLevel !== "string")
+        return { error: "Field \"educationLevel\" must be a string or null" };
+
+    if (landOwnership !== null && typeof landOwnership !== "boolean")
+        return { error: "Field \"landOwnership\" must be a boolean or null" };
+
+    return {
+        data: {
+            name: name.trim(),
+            dateOfBirth,
+            gender,
+            annualIncome,
+            category,
+            state: state.trim(),
+            isStudent,
+            employmentStatus,
+            isDisabled,
+            educationLevel,
+            landOwnership,
+        },
+    };
 };
+
+// ─── Family member validation ─────────────────────────────────────────────────
+
+/**
+ * Validate and return a clean family member object, or return an error string.
+ *
+ * @param {object} body
+ * @returns {{ data: object } | { error: string }}
+ */
+const parseFamilyMember = (body) => {
+    const {
+        name,
+        dateOfBirth,
+        gender,
+        annualIncome,
+        category,
+        state,
+        isStudent,
+        employmentStatus,
+        isDisabled,
+    } = body;
+
+    if (!name || typeof name !== "string")
+        return { error: "Missing or invalid field: name (string required)" };
+
+    if (!isValidPastDate(dateOfBirth))
+        return { error: "Missing or invalid field: dateOfBirth (YYYY-MM-DD, must be in the past)" };
+
+    if (!gender || typeof gender !== "string")
+        return { error: "Missing or invalid field: gender (string required)" };
+
+    if (typeof annualIncome !== "number" || annualIncome < 0)
+        return { error: "Field \"annualIncome\" must be a non-negative number" };
+
+    if (!category || typeof category !== "string")
+        return { error: "Missing or invalid field: category (string required)" };
+
+    if (!state || typeof state !== "string")
+        return { error: "Missing or invalid field: state (string required)" };
+
+    if (typeof isStudent !== "boolean")
+        return { error: "Field \"isStudent\" must be a boolean" };
+
+    if (!employmentStatus || typeof employmentStatus !== "string")
+        return { error: "Missing or invalid field: employmentStatus (string required)" };
+
+    if (typeof isDisabled !== "boolean")
+        return { error: "Field \"isDisabled\" must be a boolean" };
+
+    return {
+        data: {
+            name: name.trim(),
+            dateOfBirth,
+            gender,
+            annualIncome,
+            category,
+            state: state.trim(),
+            isStudent,
+            employmentStatus,
+            isDisabled,
+        },
+    };
+};
+
+// ─── Controllers ──────────────────────────────────────────────────────────────
 
 /**
  * POST /api/v1/profile
@@ -43,20 +164,17 @@ const validateProfile = (body) => {
  */
 export const createProfile = async (req, res, next) => {
     try {
-        const validationError = validateProfile(req.body);
-        if (validationError) {
-            return res.status(400).json(errorResponse(validationError));
+        const result = parsePrimaryProfile(req.body);
+        if (result.error) {
+            return res.status(400).json(errorResponse(result.error));
         }
 
-        const { age, income, category, state } = req.body;
-        const uid = req.user.uid;
-
-        await saveProfile(uid, { age, income, category, state });
+        await saveProfile(req.user.uid, result.data);
 
         return res.status(200).json(
             successResponse({
                 message: "Profile saved successfully.",
-                uid,
+                uid: req.user.uid,
             })
         );
     } catch (err) {
@@ -70,8 +188,7 @@ export const createProfile = async (req, res, next) => {
  */
 export const fetchProfile = async (req, res, next) => {
     try {
-        const uid = req.user.uid;
-        const profile = await getProfile(uid);
+        const profile = await getProfile(req.user.uid);
 
         if (!profile) {
             return res.status(404).json(errorResponse("Profile not found."));
@@ -83,56 +200,23 @@ export const fetchProfile = async (req, res, next) => {
     }
 };
 
-// ─── Family member fields ─────────────────────────────────────────────────────
-
-const FAMILY_REQUIRED_FIELDS = {
-    name: "string",
-    age: "number",
-    income: "number",
-    category: "string",
-    state: "string",
-};
-
-const validateFamilyMember = (body) => {
-    for (const [field, type] of Object.entries(FAMILY_REQUIRED_FIELDS)) {
-        if (body[field] === undefined || body[field] === null) {
-            return `Missing required field: ${field}`;
-        }
-        if (typeof body[field] !== type) {
-            return `Field "${field}" must be a ${type}`;
-        }
-    }
-    return null;
-};
-
 /**
  * POST /api/v1/profile/family
  * Add a new family member for the authenticated user.
  */
+
 export const addMember = async (req, res, next) => {
     try {
-        const validationError = validateFamilyMember(req.body);
-        if (validationError) {
-            return res.status(400).json(errorResponse(validationError));
+        const result = parseFamilyMember(req.body);
+        if (result.error) {
+            return res.status(400).json(errorResponse(result.error));
         }
 
-        const { name, age, income, category, state } = req.body;
-        const member = {
-            id: randomUUID(),
-            name,
-            age,
-            income,
-            category,
-            state,
-        };
-
+        const member = { id: randomUUID(), ...result.data };
         await addFamilyMember(req.user.uid, member);
 
         return res.status(201).json(
-            successResponse({
-                message: "Family member added.",
-                member,
-            })
+            successResponse({ message: "Family member added.", member })
         );
     } catch (err) {
         next(err);

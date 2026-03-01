@@ -6,23 +6,28 @@ const COLLECTION = "users";
 /**
  * Save (overwrite) the primaryProfile for a given uid.
  * Creates the document with defaults if it doesn't exist yet.
+ * Always sets updatedAt; sets createdAt only on first creation.
  *
  * @param {string} uid
- * @param {object} profileData
+ * @param {object} profileData  — pre-validated, whitelisted fields from controller
  */
 export const saveProfile = async (uid, profileData) => {
     const docRef = db.collection(COLLECTION).doc(uid);
     const doc = await docRef.get();
 
     if (doc.exists) {
-        // Overwrite only the primaryProfile field
-        await docRef.update({ primaryProfile: profileData });
+        await docRef.update({
+            primaryProfile: profileData,
+            updatedAt: FieldValue.serverTimestamp(),
+        });
     } else {
-        // First time — create full document structure
         await docRef.set({
+            uid,
             primaryProfile: profileData,
             familyMembers: [],
+            notificationOptIn: false,
             createdAt: FieldValue.serverTimestamp(),
+            updatedAt: FieldValue.serverTimestamp(),
         });
     }
 };
@@ -44,7 +49,7 @@ export const getProfile = async (uid) => {
  * Creates the user document first if it doesn't exist.
  *
  * @param {string} uid
- * @param {object} member  - Must include id, name, age, income, category, state
+ * @param {object} member  — pre-validated, whitelisted object with auto-generated id
  */
 export const addFamilyMember = async (uid, member) => {
     const docRef = db.collection(COLLECTION).doc(uid);
@@ -53,13 +58,16 @@ export const addFamilyMember = async (uid, member) => {
     if (doc.exists) {
         await docRef.update({
             familyMembers: FieldValue.arrayUnion(member),
+            updatedAt: FieldValue.serverTimestamp(),
         });
     } else {
-        // Create document if it doesn't exist yet
         await docRef.set({
+            uid,
             primaryProfile: null,
             familyMembers: [member],
+            notificationOptIn: false,
             createdAt: FieldValue.serverTimestamp(),
+            updatedAt: FieldValue.serverTimestamp(),
         });
     }
 };
@@ -68,7 +76,7 @@ export const addFamilyMember = async (uid, member) => {
  * Return the familyMembers array for a given uid.
  *
  * @param {string} uid
- * @returns {Array} array of family members (empty if doc not found)
+ * @returns {Array}
  */
 export const getFamilyMembers = async (uid) => {
     const doc = await db.collection(COLLECTION).doc(uid).get();
@@ -78,11 +86,11 @@ export const getFamilyMembers = async (uid) => {
 
 /**
  * Remove a family member by their id field.
- * Uses arrayRemove — requires the exact object match, so we fetch first.
+ * Fetches the document to find the exact object for arrayRemove.
  *
  * @param {string} uid
  * @param {string} memberId
- * @returns {boolean} true if member was found and removed, false otherwise
+ * @returns {boolean} true if found and removed
  */
 export const deleteFamilyMember = async (uid, memberId) => {
     const docRef = db.collection(COLLECTION).doc(uid);
@@ -97,6 +105,7 @@ export const deleteFamilyMember = async (uid, memberId) => {
 
     await docRef.update({
         familyMembers: FieldValue.arrayRemove(target),
+        updatedAt: FieldValue.serverTimestamp(),
     });
 
     return true;

@@ -1,0 +1,1518 @@
+[
+  {
+    "id": "pradhan-mantri-awas-yojana",
+    "schemeName": "Pradhan Mantri Awas Yojana",
+    "slug": "pradhan-mantri-awas-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Ministry of Housing and Urban Affairs",
+    "schemeCategory": "Housing",
+    "targetGroup": [
+      "Urban Poor",
+      "EWS",
+      "LIG",
+      "MIG"
+    ],
+    "tags": [
+      "housing",
+      "subsidy",
+      "home loan",
+      "urban"
+    ],
+    "description": "Financial assistance for affordable housing for eligible families.",
+    "benefits": "Interest subsidy and financial support for house construction.",
+    "applicationLink": "https://pmaymis.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Bank Details",
+      "Address Proof"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": 1800000,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "pradhan-mantri-kisan-samman-nidhi",
+    "schemeName": "Pradhan Mantri Kisan Samman Nidhi",
+    "slug": "pradhan-mantri-kisan-samman-nidhi",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Agriculture",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "agriculture"
+    ],
+    "description": "Pradhan Mantri Kisan Samman Nidhi is a government initiative under the Agriculture sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "ayushman-bharat-pm-jay",
+    "schemeName": "Ayushman Bharat \u2013 PM-JAY",
+    "slug": "ayushman-bharat-pm-jay",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Health",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "health"
+    ],
+    "description": "Ayushman Bharat \u2013 PM-JAY is a government initiative under the Health sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "pradhan-mantri-ujjwala-yojana",
+    "schemeName": "Pradhan Mantri Ujjwala Yojana",
+    "slug": "pradhan-mantri-ujjwala-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "welfare"
+    ],
+    "description": "Pradhan Mantri Ujjwala Yojana is a government initiative under the Welfare sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "pradhan-mantri-mudra-yojana",
+    "schemeName": "Pradhan Mantri Mudra Yojana",
+    "slug": "pradhan-mantri-mudra-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Employment",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "employment"
+    ],
+    "description": "Pradhan Mantri Mudra Yojana is a government initiative under the Employment sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "pradhan-mantri-jan-dhan-yojana",
+    "schemeName": "Pradhan Mantri Jan Dhan Yojana",
+    "slug": "pradhan-mantri-jan-dhan-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Financial Inclusion",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "financial inclusion"
+    ],
+    "description": "Pradhan Mantri Jan Dhan Yojana is a government initiative under the Financial Inclusion sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "atal-pension-yojana",
+    "schemeName": "Atal Pension Yojana",
+    "slug": "atal-pension-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Pension",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "pension"
+    ],
+    "description": "Atal Pension Yojana is a government initiative under the Pension sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "pm-jeevan-jyoti-bima-yojana",
+    "schemeName": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "slug": "pm-jeevan-jyoti-bima-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Insurance",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "insurance"
+    ],
+    "description": "Pradhan Mantri Jeevan Jyoti Bima Yojana is a government initiative under the Insurance sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "pm-suraksha-bima-yojana",
+    "schemeName": "Pradhan Mantri Suraksha Bima Yojana",
+    "slug": "pm-suraksha-bima-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Insurance",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "insurance"
+    ],
+    "description": "Pradhan Mantri Suraksha Bima Yojana is a government initiative under the Insurance sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "skill-india-mission",
+    "schemeName": "Skill India Mission",
+    "slug": "skill-india-mission",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Employment",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "employment"
+    ],
+    "description": "Skill India Mission is a government initiative under the Employment sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "central-sector-scholarship",
+    "schemeName": "Central Sector Scholarship for College Students",
+    "slug": "central-sector-scholarship",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Scholarship",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "scholarship"
+    ],
+    "description": "Central Sector Scholarship for College Students is a government initiative under the Scholarship sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "national-means-cum-merit-scholarship",
+    "schemeName": "National Means-cum-Merit Scholarship",
+    "slug": "national-means-cum-merit-scholarship",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Scholarship",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "scholarship"
+    ],
+    "description": "National Means-cum-Merit Scholarship is a government initiative under the Scholarship sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "post-matric-scholarship-sc",
+    "schemeName": "Post Matric Scholarship for SC Students",
+    "slug": "post-matric-scholarship-sc",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Scholarship",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "scholarship"
+    ],
+    "description": "Post Matric Scholarship for SC Students is a government initiative under the Scholarship sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "pre-matric-scholarship-minority",
+    "schemeName": "Pre Matric Scholarship for Minority Students",
+    "slug": "pre-matric-scholarship-minority",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Scholarship",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "scholarship"
+    ],
+    "description": "Pre Matric Scholarship for Minority Students is a government initiative under the Scholarship sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "inspire-scholarship",
+    "schemeName": "INSPIRE Scholarship",
+    "slug": "inspire-scholarship",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Scholarship",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "scholarship"
+    ],
+    "description": "INSPIRE Scholarship is a government initiative under the Scholarship sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "beti-bachao-beti-padhao",
+    "schemeName": "Beti Bachao Beti Padhao",
+    "slug": "beti-bachao-beti-padhao",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "welfare"
+    ],
+    "description": "Beti Bachao Beti Padhao is a government initiative under the Welfare sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "sukanya-samriddhi-yojana",
+    "schemeName": "Sukanya Samriddhi Yojana",
+    "slug": "sukanya-samriddhi-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Savings",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "savings"
+    ],
+    "description": "Sukanya Samriddhi Yojana is a government initiative under the Savings sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "mahila-e-haat",
+    "schemeName": "Mahila E-Haat",
+    "slug": "mahila-e-haat",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Employment",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "employment"
+    ],
+    "description": "Mahila E-Haat is a government initiative under the Employment sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "ignoops",
+    "schemeName": "Indira Gandhi National Old Age Pension Scheme",
+    "slug": "ignoops",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Pension",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "pension"
+    ],
+    "description": "Indira Gandhi National Old Age Pension Scheme is a government initiative under the Pension sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "nsap",
+    "schemeName": "National Social Assistance Programme",
+    "slug": "nsap",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "welfare"
+    ],
+    "description": "National Social Assistance Programme is a government initiative under the Welfare sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "pm-fasal-bima-yojana",
+    "schemeName": "Pradhan Mantri Fasal Bima Yojana",
+    "slug": "pm-fasal-bima-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Agriculture",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "agriculture"
+    ],
+    "description": "Pradhan Mantri Fasal Bima Yojana is a government initiative under the Agriculture sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "soil-health-card",
+    "schemeName": "Soil Health Card Scheme",
+    "slug": "soil-health-card",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Agriculture",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "agriculture"
+    ],
+    "description": "Soil Health Card Scheme is a government initiative under the Agriculture sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "rsby",
+    "schemeName": "Rashtriya Swasthya Bima Yojana",
+    "slug": "rsby",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Health",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "health"
+    ],
+    "description": "Rashtriya Swasthya Bima Yojana is a government initiative under the Health sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "national-digital-health-mission",
+    "schemeName": "National Digital Health Mission",
+    "slug": "national-digital-health-mission",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Health",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "health"
+    ],
+    "description": "National Digital Health Mission is a government initiative under the Health sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "mgnrega",
+    "schemeName": "MGNREGA",
+    "slug": "mgnrega",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Employment",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "employment"
+    ],
+    "description": "MGNREGA is a government initiative under the Employment sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "stand-up-india",
+    "schemeName": "Stand Up India Scheme",
+    "slug": "stand-up-india",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Employment",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "employment"
+    ],
+    "description": "Stand Up India Scheme is a government initiative under the Employment sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "kalaignar-magalir-urimai-thogai",
+    "schemeName": "Kalaignar Magalir Urimai Thogai",
+    "slug": "kalaignar-magalir-urimai-thogai",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "welfare"
+    ],
+    "description": "Kalaignar Magalir Urimai Thogai is a government initiative under the Welfare sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "kanyashree-prakalpa",
+    "schemeName": "Kanyashree Prakalpa",
+    "slug": "kanyashree-prakalpa",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Scholarship",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "scholarship"
+    ],
+    "description": "Kanyashree Prakalpa is a government initiative under the Scholarship sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "ladli-lakshmi-yojana",
+    "schemeName": "Ladli Lakshmi Yojana",
+    "slug": "ladli-lakshmi-yojana",
+    "level": "Central",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "welfare"
+    ],
+    "description": "Ladli Lakshmi Yojana is a government initiative under the Welfare sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "rythu-bandhu",
+    "schemeName": "Rythu Bandhu Scheme",
+    "slug": "rythu-bandhu",
+    "level": "State",
+    "state": "ALL",
+    "ministry": "Government of India",
+    "schemeCategory": "Agriculture",
+    "targetGroup": [
+      "Citizens"
+    ],
+    "tags": [
+      "agriculture"
+    ],
+    "description": "Rythu Bandhu Scheme is a government initiative under the Agriculture sector.",
+    "benefits": "Financial assistance or support as per scheme guidelines.",
+    "applicationLink": "https://www.india.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "ALL"
+    }
+  },
+  {
+    "id": "amma-two-wheeler-scheme",
+    "schemeName": "Amma Two Wheeler Scheme",
+    "slug": "amma-two-wheeler-scheme",
+    "level": "State",
+    "state": "Tamil Nadu",
+    "ministry": "Government of Tamil Nadu",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Working Women"
+    ],
+    "tags": [
+      "Tamil Nadu",
+      "women empowerment",
+      "subsidy"
+    ],
+    "description": "Financial assistance scheme for working women to purchase two-wheelers.",
+    "benefits": "Subsidy up to prescribed percentage of vehicle cost subject to limits.",
+    "applicationLink": "https://www.tn.gov.in/",
+    "applicationMode": "Both",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Driving License"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": 40,
+      "incomeLimit": 250000,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Female",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "Tamil Nadu"
+    }
+  },
+  {
+    "id": "ysr-rythu-bharosa",
+    "schemeName": "YSR Rythu Bharosa",
+    "slug": "ysr-rythu-bharosa",
+    "level": "State",
+    "state": "Andhra Pradesh",
+    "ministry": "Government of Andhra Pradesh",
+    "schemeCategory": "Agriculture",
+    "targetGroup": [
+      "Farmers"
+    ],
+    "tags": [
+      "Andhra Pradesh",
+      "farmer support"
+    ],
+    "description": "Income support scheme for farmers in Andhra Pradesh.",
+    "benefits": "Annual financial assistance to eligible farmers.",
+    "applicationLink": "https://ysrrythubharosa.ap.gov.in/",
+    "applicationMode": "Offline",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Land Records",
+      "Bank Details"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "Andhra Pradesh"
+    }
+  },
+  {
+    "id": "gruha-lakshmi-scheme",
+    "schemeName": "Gruha Lakshmi Scheme",
+    "slug": "gruha-lakshmi-scheme",
+    "level": "State",
+    "state": "Karnataka",
+    "ministry": "Government of Karnataka",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Women"
+    ],
+    "tags": [
+      "Karnataka",
+      "women welfare"
+    ],
+    "description": "Monthly financial assistance to women heads of families.",
+    "benefits": "Monthly direct financial support.",
+    "applicationLink": "https://sevasindhu.karnataka.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Bank Details"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Female",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "Karnataka"
+    }
+  },
+  {
+    "id": "karunya-health-scheme",
+    "schemeName": "Karunya Health Scheme",
+    "slug": "karunya-health-scheme",
+    "level": "State",
+    "state": "Kerala",
+    "ministry": "Government of Kerala",
+    "schemeCategory": "Health",
+    "targetGroup": [
+      "Low Income Families"
+    ],
+    "tags": [
+      "Kerala",
+      "health assistance"
+    ],
+    "description": "Financial assistance for medical treatment of economically weaker sections.",
+    "benefits": "Financial aid for treatment in empanelled hospitals.",
+    "applicationLink": "https://karunya.kerala.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Medical Documents"
+    ],
+    "eligibilityRules": {
+      "minAge": null,
+      "maxAge": null,
+      "incomeLimit": 300000,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Any",
+      "state": "Kerala"
+    }
+  },
+  {
+    "id": "delhi-ladli-scheme",
+    "schemeName": "Delhi Ladli Scheme",
+    "slug": "delhi-ladli-scheme",
+    "level": "State",
+    "state": "Delhi",
+    "ministry": "Government of NCT of Delhi",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Girl Child"
+    ],
+    "tags": [
+      "Delhi",
+      "girl child"
+    ],
+    "description": "Financial assistance scheme for girl child education.",
+    "benefits": "Stage-wise financial support for education.",
+    "applicationLink": "https://delhi.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Birth Certificate",
+      "Aadhaar Card",
+      "School Certificate"
+    ],
+    "eligibilityRules": {
+      "minAge": null,
+      "maxAge": 18,
+      "incomeLimit": 100000,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Female",
+      "disabilityRequired": null,
+      "studentOnly": true,
+      "employmentStatus": null,
+      "state": "Delhi"
+    }
+  },
+  {
+    "id": "mukhyamantri-kanya-sumangala-yojana",
+    "schemeName": "Mukhyamantri Kanya Sumangala Yojana",
+    "slug": "mukhyamantri-kanya-sumangala-yojana",
+    "level": "State",
+    "state": "Uttar Pradesh",
+    "ministry": "Government of Uttar Pradesh",
+    "schemeCategory": "Welfare",
+    "targetGroup": [
+      "Girl Child"
+    ],
+    "tags": [
+      "Uttar Pradesh",
+      "girl child support"
+    ],
+    "description": "Financial assistance scheme for girl child from birth to graduation.",
+    "benefits": "Multi-stage financial support for education.",
+    "applicationLink": "https://mksy.up.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Birth Certificate",
+      "Aadhaar Card",
+      "Income Certificate"
+    ],
+    "eligibilityRules": {
+      "minAge": null,
+      "maxAge": 18,
+      "incomeLimit": 300000,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Female",
+      "disabilityRequired": null,
+      "studentOnly": true,
+      "employmentStatus": null,
+      "state": "Uttar Pradesh"
+    }
+  },
+  {
+    "id": "haryana-saksham-yuva-yojana",
+    "schemeName": "Saksham Yuva Yojana",
+    "slug": "haryana-saksham-yuva-yojana",
+    "level": "State",
+    "state": "Haryana",
+    "ministry": "Government of Haryana",
+    "schemeCategory": "Employment",
+    "targetGroup": [
+      "Unemployed Youth"
+    ],
+    "tags": [
+      "Haryana",
+      "unemployment allowance"
+    ],
+    "description": "Financial assistance and honorarium for unemployed educated youth.",
+    "benefits": "Monthly unemployment allowance.",
+    "applicationLink": "https://www.hreyahs.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Educational Certificate"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": 35,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": "Unemployed",
+      "state": "Haryana"
+    }
+  },
+  {
+    "id": "bihar-student-credit-card-scheme",
+    "schemeName": "Bihar Student Credit Card Scheme",
+    "slug": "bihar-student-credit-card-scheme",
+    "level": "State",
+    "state": "Bihar",
+    "ministry": "Government of Bihar",
+    "schemeCategory": "Scholarship",
+    "targetGroup": [
+      "Students"
+    ],
+    "tags": [
+      "Bihar",
+      "education loan"
+    ],
+    "description": "Education loan support for higher education students.",
+    "benefits": "Loan assistance for higher studies.",
+    "applicationLink": "https://www.7nishchay-yuvaupmission.bihar.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Educational Documents"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": 25,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": true,
+      "employmentStatus": null,
+      "state": "Bihar"
+    }
+  },
+  {
+    "id": "mukhyamantri-chiranjeevi-yojana",
+    "schemeName": "Mukhyamantri Chiranjeevi Yojana",
+    "slug": "mukhyamantri-chiranjeevi-yojana",
+    "level": "State",
+    "state": "Rajasthan",
+    "ministry": "Government of Rajasthan",
+    "schemeCategory": "Health",
+    "targetGroup": [
+      "Residents of Rajasthan"
+    ],
+    "tags": [
+      "Rajasthan",
+      "health insurance"
+    ],
+    "description": "Health insurance scheme for residents of Rajasthan.",
+    "benefits": "Cashless health coverage as per scheme guidelines.",
+    "applicationLink": "https://chiranjivi.rajasthan.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Jan Aadhaar Card"
+    ],
+    "eligibilityRules": {
+      "minAge": null,
+      "maxAge": null,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": null,
+      "employmentStatus": null,
+      "state": "Rajasthan"
+    }
+  },
+  {
+    "id": "west-bengal-student-credit-card",
+    "schemeName": "West Bengal Student Credit Card Scheme",
+    "slug": "west-bengal-student-credit-card",
+    "level": "State",
+    "state": "West Bengal",
+    "ministry": "Government of West Bengal",
+    "schemeCategory": "Scholarship",
+    "targetGroup": [
+      "Students"
+    ],
+    "tags": [
+      "West Bengal",
+      "education loan"
+    ],
+    "description": "Education loan scheme for higher studies.",
+    "benefits": "Loan support at concessional interest rates.",
+    "applicationLink": "https://wbscc.wb.gov.in/",
+    "applicationMode": "Online",
+    "deadline": null,
+    "isActive": true,
+    "documentsRequired": [
+      "Aadhaar Card",
+      "Educational Certificate"
+    ],
+    "eligibilityRules": {
+      "minAge": 18,
+      "maxAge": 40,
+      "incomeLimit": null,
+      "allowedCategories": [
+        "ALL"
+      ],
+      "gender": "Any",
+      "disabilityRequired": null,
+      "studentOnly": true,
+      "employmentStatus": null,
+      "state": "West Bengal"
+    }
+  }
+]
