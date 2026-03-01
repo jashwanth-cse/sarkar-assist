@@ -3,12 +3,12 @@ import { useAuth } from "../context/AuthContext";
 
 /**
  * Wraps private routes.
- * - Renders a loading indicator while auth state is resolving.
- * - Redirects unauthenticated visitors to the login page.
- * - Renders nested <Route> elements via <Outlet> when authenticated.
+ * - Shows a loading screen while the auth state is being resolved (token vs /auth/me check).
+ * - Redirects unauthenticated visitors to /login.
+ * - Renders nested routes via <Outlet> when authenticated.
  */
 export default function ProtectedRoute() {
-    const { user, loading } = useAuth();
+    const { isAuthenticated, loading } = useAuth();
 
     if (loading) {
         return (
@@ -19,8 +19,8 @@ export default function ProtectedRoute() {
         );
     }
 
-    if (!user) {
-        return <Navigate to="/" replace />;
+    if (!isAuthenticated) {
+        return <Navigate to="/login" replace />;
     }
 
     return <Outlet />;

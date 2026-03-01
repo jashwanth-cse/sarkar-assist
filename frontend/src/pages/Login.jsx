@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
 
 /* ── Scheme card data ─────────────────────────────────── */
 const SCHEMES = [
@@ -52,22 +50,9 @@ const STATS = [
 /* ─────────────────────────────────────────────────────── */
 
 export default function Login() {
-    const { user, loading, loginWithGoogle } = useAuth();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (!loading && user) {
-            navigate("/dashboard", { replace: true });
-        }
-    }, [user, loading, navigate]);
-
-    const handleLogin = async () => {
-        try {
-            await loginWithGoogle();
-        } catch (error) {
-            console.error("Google sign-in failed:", error);
-        }
-    };
+    const handleLogin = () => navigate("/login");
 
     return (
         <div className="min-h-screen flex flex-col bg-gray-100 font-sans">
@@ -113,10 +98,9 @@ export default function Login() {
                     {/* CTA */}
                     <button
                         onClick={handleLogin}
-                        disabled={loading}
-                        className="bg-orange-500 hover:bg-orange-400 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors disabled:opacity-50"
+                        className="bg-orange-500 hover:bg-orange-400 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
                     >
-                        Sign In with Google
+                        Sign In
                     </button>
                 </div>
             </header>
@@ -143,15 +127,8 @@ export default function Login() {
                             </p>
                             <button
                                 onClick={handleLogin}
-                                disabled={loading}
-                                className="flex items-center gap-3 bg-white text-blue-900 font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl hover:bg-blue-50 transition-all disabled:opacity-50 text-base"
+                                className="flex items-center gap-3 bg-white text-blue-900 font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl hover:bg-blue-50 transition-all text-base"
                             >
-                                <svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true">
-                                    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
-                                    <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
-                                    <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
-                                    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
-                                </svg>
                                 Check Your Eligibility Free
                             </button>
                         </div>
@@ -231,7 +208,7 @@ export default function Login() {
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { step: "01", title: "Sign In with Google", desc: "Secure, one-click login. No passwords to remember." },
+                            { step: "01", title: "Sign In", desc: "Secure login with your email and password. Quick and easy." },
                             { step: "02", title: "Complete Your Profile", desc: "Enter age, income, state and category. Takes less than a minute." },
                             { step: "03", title: "Get Matched Instantly", desc: "Our AI scans 1,500+ schemes and shows your personalised list." },
                         ].map(({ step, title, desc }) => (
@@ -253,8 +230,7 @@ export default function Login() {
                 <p className="mb-6 text-orange-100 text-sm">Free to use. Powered by Government of India data.</p>
                 <button
                     onClick={handleLogin}
-                    disabled={loading}
-                    className="bg-white text-orange-600 font-bold px-8 py-3 rounded-xl hover:bg-orange-50 transition-colors shadow-md disabled:opacity-50"
+                    className="bg-white text-orange-600 font-bold px-8 py-3 rounded-xl hover:bg-orange-50 transition-colors shadow-md"
                 >
                     Get Started — It's Free
                 </button>

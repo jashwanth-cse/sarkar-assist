@@ -4,65 +4,75 @@ import {
     useEffect,
     useState,
     useCallback,
-    useRef,
 } from "react";
-import {
-    GoogleAuthProvider,
-    onAuthStateChanged,
-    signInWithPopup,
-    signOut,
-} from "firebase/auth";
-import { auth } from "../config/firebase";
+import { useNavigate } from "react-router-dom";
+import { login as apiLogin, signup as apiSignup, logout as apiLogout, getMe } from "../api/auth.api";
 
 const AuthContext = createContext(null);
 
-const googleProvider = new GoogleAuthProvider();
+const TOKEN_KEY = "token";
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
+    const [token, setToken] = useState(() => localStorage.getItem(TOKEN_KEY));
     const [loading, setLoading] = useState(true);
 
-    // Prevents multiple concurrent signInWithPopup calls (e.g. clicking
-    // several sign-in buttons on the landing page in quick succession).
-    const popupInProgress = useRef(false);
+    const isAuthenticated = Boolean(user);
 
-    // Track auth state across the app lifecycle
+    // On mount: validate token by calling /auth/me
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-            setUser(firebaseUser);
+        const storedToken = localStorage.getItem(TOKEN_KEY);
+        if (!storedToken) {
             setLoading(false);
-        });
-        return () => unsubscribe();
+            return;
+        }
+
+        getMe()
+            .then((res) => {
+                setUser(res.user ?? res);
+            })
+            .catch(() => {
+                // Token invalid or expired → clear it
+                localStorage.removeItem(TOKEN_KEY);
+                setToken(null);
+                setUser(null);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
     }, []);
 
-    const loginWithGoogle = useCallback(async () => {
-        if (popupInProgress.current) return; // guard: only one popup at a time
-        popupInProgress.current = true;
+    const login = useCallback(async (formData) => {
+        const res = await apiLogin(formData);
+        const { token: newToken, user: newUser } = res;
+        localStorage.setItem(TOKEN_KEY, newToken);
+        setToken(newToken);
+        setUser(newUser);
+    }, []);
+
+    const signup = useCallback(async (formData) => {
+        const res = await apiSignup(formData);
+        const { token: newToken, user: newUser } = res;
+        localStorage.setItem(TOKEN_KEY, newToken);
+        setToken(newToken);
+        setUser(newUser);
+    }, []);
+
+    const logout = useCallback(async () => {
         try {
-            await signInWithPopup(auth, googleProvider);
+            await apiLogout();
+        } catch (_) {
+            // Ignore errors on logout — always clear locally
         } finally {
-            popupInProgress.current = false;
+            localStorage.removeItem(TOKEN_KEY);
+            setToken(null);
+            setUser(null);
+            // Hard redirect for a clean slate
+            window.location.href = "/login";
         }
     }, []);
 
-
-    const logout = useCallback(async () => {
-        await signOut(auth);
-    }, []);
-
-    /**
-     * Returns the current user's Firebase ID token.
-     * Force-refreshes the token if it is about to expire.
-     */
-    const getIdToken = useCallback(
-        async (forceRefresh = false) => {
-            if (!auth.currentUser) return null;
-            return auth.currentUser.getIdToken(forceRefresh);
-        },
-        []
-    );
-
-    const value = { user, loading, loginWithGoogle, logout, getIdToken };
+    const value = { user, token, loading, isAuthenticated, login, signup, logout };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
