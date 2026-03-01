@@ -1,0 +1,175 @@
+/* =========================================================
+   Profile Setup Page
+   ========================================================= */
+.setup-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at 80% 20%,
+            rgba(91, 115, 255, 0.1) 0%,
+            transparent 55%),
+        var(--color-bg);
+    padding: 2rem 1.5rem;
+}
+
+.setup-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem 2.25rem;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: var(--shadow-lg);
+    animation: fadeSlideUp 0.4s ease both;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.setup-card__header {
+    margin-bottom: 2rem;
+}
+
+.setup-card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+}
+
+.setup-card__subtitle {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-top: 0.4rem;
+    line-height: 1.5;
+}
+
+/* ── Form ── */
+.setup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.01em;
+}
+
+.form-input,
+.form-select {
+    background: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b91ad' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    padding-right: 2.25rem;
+    cursor: pointer;
+}
+
+.form-select option {
+    background: #1a1d27;
+    color: var(--color-text-primary);
+}
+
+.form-input:focus,
+.form-select:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(91, 115, 255, 0.15);
+}
+
+.form-input--error {
+    border-color: var(--color-danger) !important;
+}
+
+.form-input--error:focus {
+    box-shadow: 0 0 0 3px rgba(255, 94, 94, 0.15) !important;
+}
+
+.form-input:disabled,
+.form-select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Remove number spinner arrows */
+.form-input[type="number"]::-webkit-inner-spin-button,
+.form-input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.form-error {
+    font-size: 0.78rem;
+    color: var(--color-danger);
+    margin-top: 0.1rem;
+}
+
+.form-server-error {
+    font-size: 0.85rem;
+    color: var(--color-danger);
+    background: rgba(255, 94, 94, 0.08);
+    border: 1px solid rgba(255, 94, 94, 0.25);
+    border-radius: var(--radius-md);
+    padding: 0.65rem 0.9rem;
+}
+
+/* ── Submit Button ── */
+.submit-btn {
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--radius-md);
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition),
+        opacity var(--transition);
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: var(--color-accent-hover);
+    transform: translateY(-1px);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}

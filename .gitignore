@@ -1,3 +1,8 @@
+node_modules
+.env
+dist
+build
+.firebase
 node_modules/
 
 .env
